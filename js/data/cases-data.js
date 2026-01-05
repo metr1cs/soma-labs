@@ -5,10 +5,10 @@ export const casesData = [
         title: 'Coswick.market',
         tag: 'E-commerce',
         category: 'sites', //
-        imageSrc: '/image/cases/Frame1312317285.webp',
+        imageSrc: './image/cases/Frame1312317285.webp',
 
         slides: [
-            { src: '/image/cases/screan2026-01-05-21.38.05.png', caption: 'Главная страница' },
+            { src: './image/cases/screan2026-01-05-21.38.05.png', caption: 'Главная страница' },
             { src: '/image/cases/screan2026-01-05-21.39.14.png', caption: 'Карточка товара' },
             { src: '/image/cases/screan2026-01-05-21.40.20.png', caption: 'Админ панель' }
         ]
@@ -18,7 +18,7 @@ export const casesData = [
         title: 'Юридическая помощь в Нижневартовске',
         tag: 'E-commerce',
         category: 'sites', //
-        imageSrc: '/image/cases/Frame1312317278.webp',
+        imageSrc: './image/cases/Frame1312317278.webp',
 
         slides: [
             { src: '/image/cases/screan2026-01-05-21.44.50.png', caption: 'Главная страница' },
