@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2492ad5f-1984-4df6-978a-859651a8e1a3" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.4.10/bin/php" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="340gRyd58Apu9u0tk4AKd1VGFDS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.localhost:5174.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "/Users/kez92/project/soma",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/js/modules" />
+      <recent name="$PROJECT_DIR$/js/data" />
+      <recent name="$PROJECT_DIR$/image/personal" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="localhost:5174" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:5174/">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:5174" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-WS-253.28294.332" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2492ad5f-1984-4df6-978a-859651a8e1a3" name="Changes" comment="" />
+      <created>1760355898394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760355898394</updated>
+      <workItem from="1760355899470" duration="4000" />
+      <workItem from="1760356068440" duration="7000" />
+      <workItem from="1762601166823" duration="5424000" />
+      <workItem from="1762623555132" duration="30000" />
+      <workItem from="1762875470356" duration="1466000" />
+      <workItem from="1762959949221" duration="6000" />
+      <workItem from="1763329694925" duration="1625000" />
+      <workItem from="1763331345065" duration="76000" />
+      <workItem from="1763333382741" duration="120000" />
+      <workItem from="1763388047163" duration="95000" />
+      <workItem from="1766659010651" duration="12147000" />
+      <workItem from="1766679696434" duration="249000" />
+      <workItem from="1767444569551" duration="3763000" />
+      <workItem from="1767533840283" duration="7000" />
+      <workItem from="1767535011825" duration="13610000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

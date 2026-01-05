@@ -1,0 +1,85 @@
+// ==========================================================================
+// == СЕКЦИЯ ПАРТНЕРСТВА (Partnership) - ИСПРАВЛЕННАЯ ВЕРСИЯ
+// ==========================================================================
+
+.partnership {
+  padding: var(--section-padding) 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--card-border);
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  // ВОЗВРАЩЕНО: Этот блок был удален, но он есть в вашем HTML.
+  // Возвращаем его, чтобы стили центрирования применились.
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+
+    &-accent {
+      color: var(--accent);
+    }
+  }
+
+  &__text {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-bottom: 60px;
+    text-align: left; // Сбрасываем центрирование для самих шагов
+  }
+
+  // Кнопка "Стать партнером" наследует стили от .button-guide и .footer__cta-button,
+  // поэтому отдельные стили здесь не нужны.
+}
+
+.step {
+  // Стили для каждого шага
+  &__icon {
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  }
+
+  // ИЗМЕНЕНО ОБРАТНО: Возвращаем селектор по тегу h4,
+  // так как в вашем HTML нет класса .step__title
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    text-align: center;
+  }
+
+  p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}

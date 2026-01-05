@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- =================================================================
+    == 1. ОСНОВНЫЕ МЕТА-ТЕГИ И SEO
+    ================================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title: Оптимизирован для SEO. Главный ключ + УТП + Локация -->
+    <title>Soma Labs | Digital-агентство: Создание сайтов и дизайн в Санкт-Петербурге</title>
+
+    <!-- Description: Продающий текст для сниппета в Google/Yandex. Длина ~160 символов. -->
+    <meta name="description" content="🚀 Digital-агентство Soma Labs в Санкт-Петербурге. Создаем сайты с высокой конверсией, продуманный UI/UX дизайн и запоминающийся брендинг. Повысим ваши продажи с помощью современных технологий.">
+
+    <!-- Canonical: Указывает основную версию страницы. Абсолютно необходимо. -->
+    <link rel="canonical" href="https://somalabs.ru">
+
+    <!-- =================================================================
+    == 2. OPEN GRAPH (для соцсетей - VK, Telegram, и т.д.)
+    ================================================================== -->
+    <meta property="og:title" content="Soma Labs - Создание сайтов и digital-решения для бизнеса">
+    <meta property="og:description" content="Профессиональное создание сайтов, дизайн и разработка. Digital-агентство полного цикла в Санкт-Петербурге.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://somalabs.ru">
+    <meta property="og:image" content="https://somalabs.ru/image/og-image-1200x630.jpg"> <!-- Рекомендованный размер 1200x630 -->
+    <meta property="og:site_name" content="Soma Labs">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- =================================================================
+    == 3. FAVICONS (Иконки для всех устройств)
+    ================================================================== -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <!-- 180x180 -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- =================================================================
+    == 4. ШРИФТЫ И СТИЛИ
+    ================================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- =================================================================
+    == 5. SCHEMA.ORG (Микроразметка для Google)
+    ================================================================== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Soma Labs",
+            "image": "https://somalabs.ru/image/og-image-1200x630.jpg",
+            "@id": "https://somalabs.ru",
+            "url": "https://somalabs.ru",
+            "telephone": "+7-995-592-62-60",
+            "priceRange": "$$$",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Санкт-Петербург",
+                "addressCountry": "RU"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+7-995-592-62-60",
+                "contactType": "sales",
+                "areaServed": "RU",
+                "availableLanguage": ["Russian", "English"]
+            },
+            "sameAs": [
+                "https://vk.com/somalabs",
+                "https://t.me/somalabs"
+            ]
+        }
+    </script>
+</head>
+<body class="dark-theme"> <!-- Тема по умолчанию, JS может изменить ее на основе localStorage -->
+
+<div class="bubbles-container">
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+</div>
+
+<header class="header" id="header"> <!-- ✅ ИЗМЕНЕНИЕ: Добавлен id="header" -->
+    <div class="header__container">
+        <a href="#home" class="header__logo">SOMA<span>LABS</span></a>
+        <nav class="header__nav">
+            <a href="#services" class="header__link"><span>01.</span>Услуги</a>
+            <a href="#cases" class="header__link"><span>02.</span>Кейсы</a>
+            <a href="#team" class="header__link"><span>03.</span>Команда</a>
+            <a href="#partnership" class="header__link"><span>04.</span>Сотрудничество</a>
+        </nav>
+        <div class="header__actions">
+            <button type="button" class="header__cta button-guide" data-modal-target="#contact-modal">Запустить проект</button>
+        </div>
+        <!-- ✅ ИЗМЕНЕНИЕ: Добавлена кнопка-бургер с id="burger-btn" -->
+        <button class="header__burger-btn" id="burger-btn" aria-label="Открыть меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero__background">
+            <div class="hero__orb hero__orb--1"></div>
+            <div class="hero__orb hero__orb--2"></div>
+        </div>
+        <div class="hero__container">
+            <div class="hero__content">
+                <div class="hero__badge animate-up">
+                    <span class="hero__badge-dot"></span>
+                    Digital Agency & Product Production
+                </div>
+                <h1 class="hero__title animate-up">
+                    <span class="hero__title-accent">Разработка сайтов</span><br>с повышенной конверсией
+                </h1>
+                <p class="hero__description animate-up">
+                    Мы проектируем <strong>масштабируемые IT-решения</strong> и визуальные стратегии, которые выделяют вас среди конкурентов и превращают посетителей в клиентов.
+                </p>
+                <div class="hero__benefits animate-up">
+                    <div class="benefit-item"><span class="benefit-icon">✦</span><span class="benefit-text">Data-driven дизайн</span></div>
+                    <div class="benefit-item"><span class="benefit-icon">✦</span><span class="benefit-text">Стек: React / Next.js / Node / Vue</span></div>
+                    <div class="benefit-item"><span class="benefit-icon">✦</span><span class="benefit-text">SEO-оптимизация</span></div>
+                    <div class="benefit-item"><span class="benefit-icon">✦</span><span class="benefit-text">Яндекс-директ</span></div>
+                    <div class="benefit-item"><span class="benefit-icon">✦</span><span class="benefit-text">Айдентика</span></div>
+                </div>
+                <div class="hero__actions animate-up">
+                    <button type="button" class="button-guide primary" data-modal-target="#contact-modal">Бесплатная консультация</button>
+                    <div class="hero__trust">
+                        <div class="hero__trust-avatars">
+                            <img src="https://i.pravatar.cc/100?img=1" alt="Аватар клиента 1">
+                            <img src="https://i.pravatar.cc/100?img=12" alt="Аватар клиента 2">
+                            <img src="https://i.pravatar.cc/100?img=33" alt="Аватар клиента 3">
+                        </div>
+                        <span class="hero__trust-text">Нам доверяют 50+ компаний</span>
+                    </div>
+                </div>
+                <div class="hero__stats animate-up">
+                    <div class="hero__stat-item"><span class="hero__stat-value" data-target="120">0+</span><span class="hero__stat-label">Проектов</span></div>
+                    <div class="hero__stat-item"><span class="hero__stat-value" data-target="98">0%</span><span class="hero__stat-label">Retention Rate</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <div class="hero__scroll-mouse"><div class="hero__scroll-wheel"></div></div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services__container">
+            <div class="services__header animate-up">
+                <div class="services__badge"><span class="services__badge-dot"></span><span class="services__badge-text">Наши компетенции</span></div>
+                <h2 class="services__title">Мы создаем <span class="services__title-accent">цифровые экосистемы</span></h2>
+                <p class="services__subtitle">От идеи до масштабируемого продукта. Сочетаем эстетику дизайна с мощью современных технологий.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card animate-up" data-service-id="web-dev"><div class="service-card__number">01</div><h3 class="service-card__title">Веб-разработка</h3><p class="service-card__description">Высокопроизводительные решения для бизнеса на современном стеке.</p><div class="service-card__work-list"><span class="work-list-title">Что входит:</span><ul><li>SPA / PWA на React/Next.js</li><li>Сложная Backend логика</li><li>E-commerce системы</li><li>Интеграция с API/CRM</li></ul></div><a href="#contact-modal" class="service-card__cta" data-modal-target="#contact-modal"><span>Обсудить проект</span><div class="cta-circle">→</div></a></div>
+                <div class="service-card animate-up" data-service-id="design-ux"><div class="service-card__number">02</div><h3 class="service-card__title">Дизайн и UX</h3><p class="service-card__description">Интерфейсы, которые влюбляют пользователей и повышают продажи.</p><div class="service-card__work-list"><span class="work-list-title">Что входит:</span><ul><li>Прототипирование</li><li>Дизайн-системы</li><li>Web & Mobile UI</li><li>Аудит юзабилити</li></ul></div><a href="#contact-modal" class="service-card__cta" data-modal-target="#contact-modal"><span>Заказать дизайн</span><div class="cta-circle">→</div></a></div>
+                <div class="service-card animate-up" data-service-id="mobile-apps"><div class="service-card__number">03</div><h3 class="service-card__title">Mobile Apps</h3><p class="service-card__description">Нативные и кроссплатформенные приложения для iOS и Android.</p><div class="service-card__work-list"><span class="work-list-title">Что входит:</span><ul><li>Flutter / React Native</li><li>iOS & Android Native</li><li>Публикация в AppStore</li><li>Поддержка 24/7</li></ul></div><a href="#contact-modal" class="service-card__cta" data-modal-target="#contact-modal"><span>Обсудить App</span><div class="cta-circle">→</div></a></div>
+                <div class="service-card animate-up" data-service-id="branding"><div class="service-card__number">04</div><h3 class="service-card__title">Брендинг</h3><p class="service-card__description">Визуальный код компании: от логотипа до полной стратегии бренда.</p><div class="service-card__work-list"><span class="work-list-title">Что входит:</span><ul><li>Логотип и айдентика</li><li>Фирменный стиль</li><li>Гайдбуки</li><li>Упаковка продуктов</li><li>Печатная продукция</li></ul></div><a href="#contact-modal" class="service-card__cta" data-modal-target="#contact-modal"><span>Создать бренд</span><div class="cta-circle">→</div></a></div>
+                <div class="service-card animate-up" data-service-id="seo"><div class="service-card__number">05</div><h3 class="service-card__title">SEO Оптимизация</h3><p class="service-card__description">Выводим ваш сайт в топ поиска и увеличиваем органический трафик.</p><div class="service-card__work-list"><span class="work-list-title">Что входит:</span><ul><li>Технический аудит</li><li>Семантическое ядро</li><li>Линкбилдинг</li><li>SEO-копирайтинг</li></ul></div><a href="#contact-modal" class="service-card__cta" data-modal-target="#contact-modal"><span>В топ поиска</span><div class="cta-circle">→</div></a></div>
+                <div class="service-card animate-up" data-service-id="performance"><div class="service-card__number">06</div><h3 class="service-card__title">Performance</h3><p class="service-card__description">Контекстная реклама и маркетинг, работающие на результат.</p><div class="service-card__work-list"><span class="work-list-title">Что входит:</span><ul><li>Яндекс.Директ / Google</li><li>Сквозная аналитика</li><li>Медиапланирование</li><li>Оптимизация CPA</li></ul></div><a href="#contact-modal" class="service-card__cta" data-modal-target="#contact-modal"><span>Нужны продажи</span><div class="cta-circle">→</div></a></div>
+                <div class="service-card animate-up" data-service-id="no-code"><div class="service-card__number">07</div><h3 class="service-card__title">No-code</h3><p class="service-card__description">Быстрый запуск имиджевых сайтов и лендингов на Tilda / Webflow.</p><div class="service-card__work-list"><span class="work-list-title">Что входит:</span><ul><li>Zero Block дизайн</li><li>Интеграция форм</li><li>Анимация</li><li>Запуск за 10 дней</li></ul></div><a href="#contact-modal" class="service-card__cta" data-modal-target="#contact-modal"><span>Сделать быстро</span><div class="cta-circle">→</div></a></div>
+                <div class="service-card animate-up" data-service-id="crm-ai"><div class="service-card__number">08</div><h3 class="service-card__title">CRM & AI</h3><p class="service-card__description">Внедрение CRM систем и AI-ассистентов для вашего бизнеса.</p><div class="service-card__work-list"><span class="work-list-title">Что входит:</span><ul><li>Внедрение Amo/Bitrix</li><li>Чат-боты с AI</li><li>Автоматизация воронки</li><li>Обучение команды</li></ul></div><a href="#contact-modal" class="service-card__cta" data-modal-target="#contact-modal"><span>Автоматизировать</span><div class="cta-circle">→</div></a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cases" id="cases">
+        <div class="cases__container">
+            <div class="cases__header animate-up">
+                <h2 class="cases__title">Проекты, которыми <span class="cases__title-accent">мы гордимся</span></h2>
+                <div class="cases__filter" id="cases-filter-container"></div>
+            </div>
+            <div class="cases__grid" id="cases-grid"></div>
+            <div class="visually-hidden" aria-live="polite" id="filter-announcer"></div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="team__container">
+            <div class="team__header animate-up">
+                <h2 class="team__title">Команда <span>SOMA</span><span class="team__title-accent">LABS</span></h2>
+                <p class="team__subtitle">Эксперты, которые превращают ваши идеи в цифровые продукты мирового уровня.</p>
+            </div>
+            <div class="team__grid">
+                <div class="team-member animate-up"><div class="team-member__image-box"><img src="./image/personal/Маркjpg.jpg" alt="Фотография Марка Заблуева, Frontend разработчика" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Марк Заблуев</h3><span class="team-member__role">Frontend</span><p class="team-member__bio">Воплощает любые идеи в жизнь</p></div></div>
+                <div class="team-member animate-up"><div class="team-member__image-box"><img src="./image/personal/IMG_5252.JPG" alt="Фотография Валерии Ефимовой, дизайнера" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Валерия Ефимова</h3><span class="team-member__role">Дизайнер/Айдентика</span><p class="team-member__bio">Персонализирует уникальные образы и стили</p></div></div>
+                <div class="team-member animate-up"><div class="team-member__image-box"><img src="./image/personal/komitas.webp" alt="Фотография Комитаса Погосяна, Backend разработчика" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Комитас Погосян</h3><span class="team-member__role">Backend</span><p class="team-member__bio">Воин дракона</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partnership" id="partnership">
+        <div class="partnership__container">
+            <div class="partnership__content">
+                <h2 class="partnership__title">Растем <span class="partnership__title-accent">вместе</span></h2>
+                <p class="partnership__text">Мы ценим долгосрочные отношения и готовы делиться прибылью с теми, кто помогает нам находить крутые проекты.</p>
+                <div class="partnership__steps">
+                    <div class="step"><div class="step__icon">1</div><h4>Рекомендуете нас</h4><p>Передаете контакт клиента, которому нужен качественный digital-продукт.</p></div>
+                    <div class="step"><div class="step__icon">2</div><h4>Мы закрываем сделку</h4><p>Проводим пресейл, оцениваем задачу и подписываем договор.</p></div>
+                    <div class="step"><div class="step__icon">3</div><h4>Вы получаете %</h4><p>Выплачиваем вознаграждение сразу после первого транша клиента.</p></div>
+                </div>
+                <button type="button" class="button-guide footer__cta-button" data-modal-target="#contact-modal">Стать партнером</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="footer" class="footer">
+    <div class="footer__container">
+        <div class="footer__main">
+            <div class="footer__info">
+                <div class="footer__logo">SOMA<span>LABS</span></div>
+                <p class="footer__description">Создаём будущее digital-пространства вместе с вами.</p>
+                <div class="footer__socials">
+                    <a href="https://vk.com/somalabs" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Soma Labs ВКонтакте">VK</a>
+                    <a href="https://t.me/somalabs" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Soma Labs в Telegram">TG</a>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <h4 class="footer__title">Контакты</h4>
+                <a href="mailto:zabaluevmark92@gmail.com" class="footer__contact-link">zabaluevmark92@gmail.com</a>
+                <a href="tel:+79955926260" class="footer__contact-link">+7 (995) 592-62-60</a>
+            </div>
+            <div class="footer__cta">
+                <button type="button" class="footer__cta-button" data-modal-target="#contact-modal"><span>Начать проект</span><div class="footer__cta-arrow">⟶</div></button>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copyright"><span class="footer__copyright-text">© 2025 Soma Labs. Все права защищены.</span></div>
+            <div class="footer__legal"><a href="/privacy-policy.html" class="footer__legal-link">Политика конфиденциальности</a></div>
+        </div>
+    </div>
+</footer>
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Сменить тему">
+    <span class="sun">☀️</span><span class="moon">🌙</span>
+</button>
+
+<!-- =================================================================
+== УНИВЕРСАЛЬНАЯ СИСТЕМА МОДАЛЬНЫХ ОКОН
+================================================================== -->
+
+<!-- 1. Модальное окно с формой контактов -->
+<div class="modal-overlay" id="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <div class="modal-card">
+        <button class="modal-close" data-modal-close aria-label="Закрыть">×</button>
+        <div class="modal-header">
+            <h2 class="modal-title" id="contact-modal-title">Начать проект</h2>
+            <p class="modal-subtitle">Оставьте заявку, и мы свяжемся с вами в течение 30 минут</p>
+        </div>
+        <!-- =================================================================
+== Фрагмент с формой в модальном окне
+================================================================== -->
+
+        <form class="modal-form" id="contact-form">
+            <div class="form-group">
+                <label for="form-name" class="visually-hidden">Ваше имя</label>
+                <input type="text" id="form-name" name="name" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-group">
+                <label for="form-email" class="visually-hidden">Email</label>
+                <input type="email" id="form-email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="form-phone" class="visually-hidden">Телефон</label>
+                <input type="tel" id="form-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="form-group">
+                <label for="form-message" class="visually-hidden">Расскажите немного о проекте</label>
+                <textarea id="form-message" name="message" placeholder="Расскажите немного о проекте" rows="4"></textarea>
+            </div>
+
+            <!-- Honeypot: простейшая ловушка для спам-ботов -->
+            <input type="text" name="_honey" style="display:none" aria-hidden="true">
+
+            <!-- ✅ ИЗМЕНЕНИЕ: Убедись, что у кнопки есть id="form-submit-button" -->
+            <button type="submit" class="form-submit" id="form-submit-button">
+                Отправить заявку <span class="submit-arrow">⟶</span>
+            </button>
+        </form>
+
+    </div>
+</div>
+
+<!-- 2. Модальное окно для цен (попап) -->
+<div class="modal-overlay" id="prices-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="prices-modal-title">
+    <div class="modal-card">
+        <button class="modal-close" data-modal-close aria-label="Закрыть">×</button>
+        <div class="modal-header">
+            <h2 class="modal-title" id="prices-modal-title">Цены</h2>
+        </div>
+        <div id="prices-modal-content" class="modal-prices-list"></div>
+        <a href="#contact-modal" data-modal-target="#contact-modal" data-modal-close-self class="popup-cta">
+            <span>Обсудить детали</span>
+            <div class="cta-circle">→</div>
+        </a>
+    </div>
+</div>
+
+<!-- =================================================================
+== ЕДИНАЯ ТОЧКА ВХОДА ДЛЯ ВСЕХ СКРИПТОВ
+================================================================== -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script type="module" src="./js/app.js"></script>
+
+</body>
+</html>

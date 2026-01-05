@@ -1,0 +1,255 @@
+// ==========================================================================
+// ГЛАВНЫЙ SCSS-ФАЙЛ (Точка входа)
+// ==========================================================================
+
+// ==========================================================================
+// 1. ИМПОРТ КОМПОНЕНТОВ
+// ==========================================================================
+// Структура импортов приведена в соответствие с финальным HTML
+
+@import "./cases/partnership",'./cases/cases',
+'./footer/footer',
+'./header/header',
+'./hero/hero',
+'./modal/modal',
+'./modal/modal',
+'./personal/personal',
+'./services/services';
+
+
+
+// ==========================================================================
+// 2. ПЕРЕМЕННЫЕ ТЕМ (CSS Variables)
+// ==========================================================================
+:root {
+    // Темная тема (Original)
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #1a1a1a;
+    --bg-footer: #0a0a0a;
+    --text-main: #ffffff;
+    --text-dim: rgba(255, 255, 255, 0.7);
+    --accent: #667eea;
+    --accent-secondary: #764ba2;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --orb-opacity: 0.1;
+    --header-bg: rgba(15, 15, 15, 0.8);
+    --transition-speed: 0.3s;
+    --section-padding: clamp(60px, 10vw, 120px);
+    --container-gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+body.light-theme {
+    // Светлая тема
+    --bg-primary: #f8faff;
+    --bg-secondary: #ffffff;
+    --bg-footer: #f1f4f9;
+    --text-main: #1a1f35;
+    --text-dim: #5d6785;
+    --card-bg: #ffffff;
+    --card-border: rgba(102, 126, 234, 0.1);
+    --orb-opacity: 0.05;
+    --header-bg: rgba(248, 250, 255, 0.8);
+}
+
+// ==========================================================================
+// 3. БАЗОВЫЕ СТИЛИ И СБРОС (Reset)
+// ==========================================================================
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    @media (max-width: 380px) { font-size: 14px; }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// ==========================================================================
+// 4. УТИЛИТЫ (Utilities)
+// ==========================================================================
+// Класс .center был удален, так как он не использовался в финальной верстке.
+
+// Скрытие элементов для экранных дикторов (A11y)
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+// ==========================================================================
+// 5. ДОСТУПНОСТЬ (Accessibility)
+// ==========================================================================
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+// ==========================================================================
+// 6. СТИЛИ UI-КОМПОНЕНТОВ (Кнопка темы, пузырьки)
+// ==========================================================================
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    &:hover { transform: scale(1.1) rotate(15deg); }
+    .sun { display: none; }
+    .moon { display: block; color: #fff; }
+}
+
+body.light-theme .theme-toggle {
+    .sun { display: block; color: #f39c12; }
+    .moon { display: none; }
+}
+
+.bubbles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; // Чтобы точно было позади всего
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -150px; // Начинаем чуть ниже
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0; // Начинаем с полной прозрачности
+    filter: blur(2px);
+    animation: rise 25s infinite ease-in-out;
+
+    // ИЗМЕНЕНО: Добавлено гораздо больше вариаций для всех 18 пузырьков
+    &:nth-child(1) { left: 10%; width: 80px; height: 80px; animation-duration: 20s; opacity: 0.05; }
+    &:nth-child(2) { left: 20%; width: 30px; height: 30px; animation-duration: 12s; animation-delay: 2s; }
+    &:nth-child(3) { left: 45%; width: 50px; height: 50px; animation-duration: 18s; animation-delay: 5s; }
+    &:nth-child(4) { left: 70%; width: 100px; height: 100px; animation-duration: 25s; animation-delay: 1s; opacity: 0.04; }
+    &:nth-child(5) { left: 85%; width: 40px; height: 40px; animation-duration: 15s; animation-delay: 8s; }
+    &:nth-child(6) { left: 95%; width: 60px; height: 60px; animation-duration: 22s; animation-delay: 3s; }
+    &:nth-child(7) { left: 5%; width: 20px; height: 20px; animation-duration: 30s; animation-delay: 7s; }
+    &:nth-child(8) { left: 30%; width: 70px; height: 70px; animation-duration: 16s; animation-delay: 4s; opacity: 0.06; }
+    &:nth-child(9) { left: 55%; width: 35px; height: 35px; animation-duration: 19s; animation-delay: 9s; }
+    &:nth-child(10) { left: 80%; width: 90px; height: 90px; animation-duration: 28s; animation-delay: 6s; opacity: 0.03; }
+    &:nth-child(11) { left: 65%; width: 25px; height: 25px; animation-duration: 14s; animation-delay: 11s; }
+    &:nth-child(12) { left: 40%; width: 45px; height: 45px; animation-duration: 21s; animation-delay: 1s; }
+
+    body.light-theme & {
+        background: var(--accent);
+        opacity: 0.08;
+    }
+}
+
+// ИЗМЕНЕНО: Оптимизированная анимация
+@keyframes rise {
+    0% {
+        bottom: -150px;
+        transform: translateX(0) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateX(100px) scale(1.2);
+    }
+    90% {
+        opacity: 0.05;
+    }
+    100% {
+        bottom: 105vh;
+        transform: translateX(-50px) scale(0.6);
+        opacity: 0;
+    }
+}
+
+// ==========================================================================
+// == КОМПОНЕНТ: Кнопка Призыва к Действию (CTA Button)
+// ==========================================================================
+
+// ==========================================================================
+// == КОМПОНЕНТЫ: Кнопки (General Buttons)
+// ==========================================================================
+
+.button-guide {
+    display: inline-flex; // Для центрирования текста и стрелки
+    align-items: center;
+    justify-content: center; // Для центрирования на всю ширину кнопки
+    gap: 1rem; // Отступ между текстом и стрелкой
+    background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+    color: white;
+    border: none;
+    padding: 14px 28px; // Стандартный размер
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none; // Если используется на <a>
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap; // Чтобы текст кнопки не переносился
+    position: relative; // Для позиционирования внутренних элементов, если нужно
+    overflow: hidden; // Для эффектов при наведении
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+        // Градиент при ховере можно сделать чуть светлее или темнее
+        // background: linear-gradient(135deg, darken(var(--accent), 5%), darken(var(--accent-secondary), 5%));
+    }
+
+    // Модификатор для больших кнопок (например, в Hero секции)
+    &--large {
+        padding: 18px 36px;
+        font-size: 1rem;
+    }
+}
+
