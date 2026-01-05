@@ -5,7 +5,7 @@ export const casesData = [
         title: 'Coswick.market',
         tag: 'E-commerce',
         category: 'sites', //
-        imageSrc: './Frame 1312317285.webp',
+        imageSrc: '/image/cases/Frame 1312317285.webp',
 
         slides: [
             { src: '/image/cases/Снимок экрана 2026-01-05 в 21.38.05.png', caption: 'Главная страница' },
