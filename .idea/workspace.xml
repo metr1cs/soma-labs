@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2492ad5f-1984-4df6-978a-859651a8e1a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-06 в 01.00.21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-06 в 01.01.24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-06 в 01.02.16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-06 в 01.07.50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/send-telegram.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/send-telegram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/data/cases-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/cases-data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +107,7 @@
       <workItem from="1766679696434" duration="249000" />
       <workItem from="1767444569551" duration="3763000" />
       <workItem from="1767533840283" duration="7000" />
-      <workItem from="1767535011825" duration="24385000" />
+      <workItem from="1767535011825" duration="25206000" />
     </task>
     <servers />
   </component>
