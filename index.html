@@ -2,29 +2,29 @@
 <html lang="ru">
 <head>
     <!-- =================================================================
-    == 1. ОСНОВНЫЕ МЕТА-ТЕГИ И SEO
+    == 1. ОСНОВНЫЕ МЕТА-ТЕГИ И SEO (ОБНОВЛЕНО ДЛЯ ELARA LABS)
     ================================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title: Оптимизирован для SEO. Главный ключ + УТП + Локация -->
-    <title>Soma Labs | Digital-агентство: Создание сайтов и дизайн в Санкт-Петербурге</title>
+    <!-- Title: Оптимизирован для нового бренда и SEO -->
+    <title>Elara Labs | Digital-агентство: Веб-разработка и дизайн в Санкт-Петербурге</title>
 
-    <!-- Description: Продающий текст для сниппета в Google/Yandex. Длина ~160 символов. -->
-    <meta name="description" content="🚀 Digital-агентство Soma Labs в Санкт-Петербурге. Создаем сайты с высокой конверсией, продуманный UI/UX дизайн и запоминающийся брендинг. Повысим ваши продажи с помощью современных технологий.">
+    <!-- Description: Продающий текст для сниппета в Google/Yandex -->
+    <meta name="description" content="🚀 Digital-агентство Elara Labs в Санкт-Петербурге. Создаем технологичные сайты с высокой конверсией, UI/UX дизайн и брендинг, выводящие ваш бизнес на новую орбиту.">
 
-    <!-- Canonical: Указывает основную версию страницы. Абсолютно необходимо. -->
-    <link rel="canonical" href="https://somalabs.ru">
+    <!-- Canonical: Указывает основную версию страницы -->
+    <link rel="canonical" href="https://elaralabs.ru"> <!-- Предполагаемый новый домен -->
 
     <!-- =================================================================
-    == 2. OPEN GRAPH (для соцсетей - VK, Telegram, и т.д.)
+    == 2. OPEN GRAPH (для соцсетей)
     ================================================================== -->
-    <meta property="og:title" content="Soma Labs - Создание сайтов и digital-решения для бизнеса">
-    <meta property="og:description" content="Профессиональное создание сайтов, дизайн и разработка. Digital-агентство полного цикла в Санкт-Петербурге.">
+    <meta property="og:title" content="Elara Labs - Инновационные digital-решения для вашего бизнеса">
+    <meta property="og:description" content="Профессиональная веб-разработка, дизайн и брендинг от агентства Elara Labs. Помогаем вашему бизнесу достичь новых высот.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://somalabs.ru">
-    <meta property="og:image" content="https://somalabs.ru/image/og-image-1200x630.jpg"> <!-- Рекомендованный размер 1200x630 -->
-    <meta property="og:site_name" content="Soma Labs">
+    <meta property="og:url" content="https://elaralabs.ru">
+    <meta property="og:image" content="https://elaralabs.ru/image/og-image-elara.jpg">
+    <meta property="og:site_name" content="Elara Labs">
     <meta property="og:locale" content="ru_RU">
 
     <!-- =================================================================
@@ -32,7 +32,7 @@
     ================================================================== -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <!-- 180x180 -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- =================================================================
@@ -42,20 +42,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- =================================================================
-    == 5. SCHEMA.ORG (Микроразметка для Google)
+    == 5. SCHEMA.ORG (Микроразметка, обновленная для Elara Labs)
     ================================================================== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "name": "Soma Labs",
-            "image": "https://somalabs.ru/image/og-image-1200x630.jpg",
-            "@id": "https://somalabs.ru",
-            "url": "https://somalabs.ru",
+            "name": "Elara Labs",
+            "image": "https://elaralabs.ru/image/og-image-elara.jpg",
+            "@id": "https://elaralabs.ru",
+            "url": "https://elaralabs.ru",
             "telephone": "+7-995-592-62-60",
             "priceRange": "$$$",
             "address": {
@@ -70,14 +69,11 @@
                 "areaServed": "RU",
                 "availableLanguage": ["Russian", "English"]
             },
-            "sameAs": [
-                "https://vk.com/somalabs",
-                "https://t.me/somalabs"
-            ]
+            "sameAs": [] // Оставил пустым, так как соцсети нужно будет переименовать
         }
     </script>
 </head>
-<body class="dark-theme"> <!-- Тема по умолчанию, JS может изменить ее на основе localStorage -->
+<body class="dark-theme">
 
 <div class="bubbles-container">
     <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
@@ -88,9 +84,9 @@
     <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
 </div>
 
-<header class="header" id="header"> <!-- ✅ ИЗМЕНЕНИЕ: Добавлен id="header" -->
+<header class="header" id="header">
     <div class="header__container">
-        <a href="#home" class="header__logo">SOMA<span>LABS</span></a>
+        <a href="#home" class="header__logo">ELARA<span>LABS</span></a>
         <nav class="header__nav">
             <a href="#services" class="header__link"><span>01.</span>Услуги</a>
             <a href="#cases" class="header__link"><span>02.</span>Кейсы</a>
@@ -98,9 +94,8 @@
             <a href="#partnership" class="header__link"><span>04.</span>Сотрудничество</a>
         </nav>
         <div class="header__actions">
-            <button type="button" class="header__cta button-guide" data-modal-target="#contact-modal">Запустить проект</button>
+            <button type="button" class="cta-button" data-modal-target="#contact-modal">Запустить проект</button>
         </div>
-        <!-- ✅ ИЗМЕНЕНИЕ: Добавлена кнопка-бургер с id="burger-btn" -->
         <button class="header__burger-btn" id="burger-btn" aria-label="Открыть меню" aria-expanded="false">
             <span></span>
             <span></span>
@@ -108,7 +103,6 @@
         </button>
     </div>
 </header>
-
 
 <main>
     <section class="hero" id="home">
@@ -136,7 +130,7 @@
                     <div class="benefit-item"><span class="benefit-icon">✦</span><span class="benefit-text">Айдентика</span></div>
                 </div>
                 <div class="hero__actions animate-up">
-                    <button type="button" class="button-guide primary" data-modal-target="#contact-modal">Бесплатная консультация</button>
+                    <button type="button" class="cta-button cta-button--large" data-modal-target="#contact-modal">Бесплатная консультация</button>
                     <div class="hero__trust">
                         <div class="hero__trust-avatars">
                             <img src="https://i.pravatar.cc/100?img=1" alt="Аватар клиента 1">
@@ -177,62 +171,28 @@
         </div>
     </section>
 
-    <!-- index.html -->
     <section class="cases" id="cases">
         <div class="cases__container">
             <div class="cases__header animate-up">
                 <h2 class="cases__title">Проекты, которыми <span class="cases__title-accent">мы гордимся</span></h2>
-
-                <!-- 👇 ВОЗВРАЩАЕМ ЭТОТ БЛОК 👇 -->
                 <div class="cases__filter" id="cases-filter-container"></div>
             </div>
-            <div class="cases__grid" id="cases-grid">
-                <!-- Карточки будут сгенерированы здесь -->
-            </div>
-            <!-- Возвращаем анонсер для доступности -->
+            <div class="cases__grid" id="cases-grid"></div>
             <div class="visually-hidden" aria-live="polite" id="filter-announcer"></div>
         </div>
     </section>
 
-
-
     <section class="team" id="team">
         <div class="team__container">
             <div class="team__header animate-up">
-                <h2 class="team__title">Команда <span>SOMA</span><span class="team__title-accent">LABS</span></h2>
+                <h2 class="team__title">Команда <span>ELARA</span><span class="team__title-accent">LABS</span></h2>
                 <p class="team__subtitle">Эксперты, которые превращают ваши идеи в цифровые продукты мирового уровня.</p>
             </div>
             <div class="team__grid">
-                <div class="team-member animate-up">
-                    <div class="team-member__image-box">
-                        <img src="./image/personal/Маркjpg.jpg" alt="Фотография Марка Заблуева, Frontend разработчика" class="team-member__photo" loading="lazy">
-                        <div class="team-member__socials">
-                            <a href="#" class="social-link">MAX</a>
-                            <a href="#" class="social-link">TG</a>
-                        </div>
-                    </div>
-                    <div class="team-member__info">
-                        <h3 class="team-member__name">Марк Забалуев</h3>
-                        <span class="team-member__role">Frontend</span>
-                        <p class="team-member__bio">Воплощает любые идеи в жизнь</p>
-                    </div>
-                </div>
-                <div class="team-member animate-up"><div class="team-member__image-box"><img src="./image/personal/IMG_5252.JPG" alt="Фотография Валерии Ефимовой, дизайнера" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Валерия Ефимова</h3><span class="team-member__role">Дизайнер/Айдентика</span><p class="team-member__bio">Персонализирует уникальные образы и стили</p></div></div>
-                <div class="team-member animate-up"><div class="team-member__image-box"><img src="./image/personal/komitas.webp" alt="Фотография Комитаса Погосяна, Backend разработчика" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Комитас Погосян</h3><span class="team-member__role">Backend</span><p class="team-member__bio">Воин дракона</p></div></div>
-                <div class="team-member animate-up">
-                    <div class="team-member__image-box">
-                        <img src="./image/personal/2026-01-05 21.28.21.jpg" alt="Фотография Марка Забалуева, Frontend разработчика" class="team-member__photo" loading="lazy">
-                        <div class="team-member__socials">
-                            <a href="#" class="social-link">MAX</a>
-                            <a href="#" class="social-link">TG</a>
-                        </div>
-                    </div>
-                    <div class="team-member__info">
-                        <h3 class="team-member__name">Алёна Четвергова</h3>
-                        <span class="team-member__role">Фотограф / контент-мейкер</span>
-                        <p class="team-member__bio">Профессионализм и уют в каждой съемке</p>
-                    </div>
-                </div>
+                <div class="team-member animate-up"><div class="team-member__image-box"><img src="/image/personal/Маркjpg.jpg" alt="Фотография Марка Забалуева, Frontend разработчика" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Марк Забалуев</h3><span class="team-member__role">Frontend</span><p class="team-member__bio">Воплощает любые идеи в жизнь</p></div></div>
+                <div class="team-member animate-up"><div class="team-member__image-box"><img src="/image/personal/IMG_5252.JPG" alt="Фотография Валерии Ефимовой, дизайнера" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Валерия Ефимова</h3><span class="team-member__role">Дизайнер/Айдентика</span><p class="team-member__bio">Персонализирует уникальные образы и стили</p></div></div>
+                <div class="team-member animate-up"><div class="team-member__image-box"><img src="/image/personal/komitas.webp" alt="Фотография Комитаса Погосяна, Backend разработчика" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Комитас Погосян</h3><span class="team-member__role">Backend</span><p class="team-member__bio">Воин дракона</p></div></div>
+                <div class="team-member animate-up"><div class="team-member__image-box"><img src="/image/personal/2026-01-05 21.28.21.jpg" alt="Фотография Алёны Четверговой, фотографа" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Алёна Четвергова</h3><span class="team-member__role">Фотограф / контент-мейкер</span><p class="team-member__bio">Профессионализм и уют в каждой съемке</p></div></div>
             </div>
         </div>
     </section>
@@ -247,7 +207,7 @@
                     <div class="step"><div class="step__icon">2</div><h4>Мы закрываем сделку</h4><p>Проводим пресейл, оцениваем задачу и подписываем договор.</p></div>
                     <div class="step"><div class="step__icon">3</div><h4>Вы получаете %</h4><p>Выплачиваем вознаграждение сразу после первого транша клиента.</p></div>
                 </div>
-                <button type="button" class="button-guide footer__cta-button" data-modal-target="#contact-modal">Стать партнером</button>
+                <button type="button" class="button-guide" data-modal-target="#contact-modal">Стать партнером</button>
             </div>
         </div>
     </section>
@@ -257,11 +217,10 @@
     <div class="footer__container">
         <div class="footer__main">
             <div class="footer__info">
-                <div class="footer__logo">SOMA<span>LABS</span></div>
+                <div class="footer__logo">ELARA<span>LABS</span></div>
                 <p class="footer__description">Создаём будущее digital-пространства вместе с вами.</p>
                 <div class="footer__socials">
-                    <a href="https://vk.com/somalabs" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Soma Labs ВКонтакте">VK</a>
-                    <a href="https://t.me/somalabs" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Soma Labs в Telegram">TG</a>
+                    <!-- Ссылки нужно будет добавить, когда появятся новые соцсети -->
                 </div>
             </div>
             <div class="footer__contacts">
@@ -270,11 +229,11 @@
                 <a href="tel:+79955926260" class="footer__contact-link">+7 (995) 592-62-60</a>
             </div>
             <div class="footer__cta">
-                <button type="button" class="footer__cta-button" data-modal-target="#contact-modal"><span>Начать проект</span><div class="footer__cta-arrow">⟶</div></button>
+                <button type="button" class="button-guide" data-modal-target="#contact-modal"><span>Начать проект</span><div class="footer__cta-arrow">⟶</div></button>
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="footer__copyright"><span class="footer__copyright-text">© 2025 Soma Labs. Все права защищены.</span></div>
+            <div class="footer__copyright"><span class="footer__copyright-text">© 2025 Elara Labs. Все права защищены.</span></div>
             <div class="footer__legal"><a href="/privacy-policy.html" class="footer__legal-link">Политика конфиденциальности</a></div>
         </div>
     </div>
@@ -284,11 +243,6 @@
     <span class="sun">☀️</span><span class="moon">🌙</span>
 </button>
 
-<!-- =================================================================
-== УНИВЕРСАЛЬНАЯ СИСТЕМА МОДАЛЬНЫХ ОКОН
-================================================================== -->
-
-<!-- 1. Модальное окно с формой контактов -->
 <div class="modal-overlay" id="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
     <div class="modal-card">
         <button class="modal-close" data-modal-close aria-label="Закрыть">×</button>
@@ -296,10 +250,6 @@
             <h2 class="modal-title" id="contact-modal-title">Начать проект</h2>
             <p class="modal-subtitle">Оставьте заявку, и мы свяжемся с вами в течение 30 минут</p>
         </div>
-        <!-- =================================================================
-== Фрагмент с формой в модальном окне
-================================================================== -->
-
         <form class="modal-form" id="contact-form">
             <div class="form-group">
                 <label for="form-name" class="visually-hidden">Ваше имя</label>
@@ -317,20 +267,14 @@
                 <label for="form-message" class="visually-hidden">Расскажите немного о проекте</label>
                 <textarea id="form-message" name="message" placeholder="Расскажите немного о проекте" rows="4"></textarea>
             </div>
-
-            <!-- Honeypot: простейшая ловушка для спам-ботов -->
             <input type="text" name="_honey" style="display:none" aria-hidden="true">
-
-            <!-- ✅ ИЗМЕНЕНИЕ: Убедись, что у кнопки есть id="form-submit-button" -->
             <button type="submit" class="form-submit" id="form-submit-button">
                 Отправить заявку <span class="submit-arrow">⟶</span>
             </button>
         </form>
-
     </div>
 </div>
 
-<!-- 2. Модальное окно для цен (попап) -->
 <div class="modal-overlay" id="prices-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="prices-modal-title">
     <div class="modal-card">
         <button class="modal-close" data-modal-close aria-label="Закрыть">×</button>
@@ -345,16 +289,10 @@
     </div>
 </div>
 
-<!-- 🟢 ВЕРНИ ЭТУ СТРОЧКУ 🟢 -->
-<!-- index.html -> в конце <body> -->
-<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script> <!-- 👈 ДОБАВЬ ЭТОТ СКРИПТ -->
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script type="module" src="./js/app.js"></script>
-
-
-
-
 
 </body>
 </html>

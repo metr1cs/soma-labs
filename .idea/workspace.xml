@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2492ad5f-1984-4df6-978a-859651a8e1a3" name="Changes" comment="" />
+    <list default="true" id="2492ad5f-1984-4df6-978a-859651a8e1a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,11 +62,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/image/cases" />
       <recent name="$PROJECT_DIR$/image/personal" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/js/modules" />
-      <recent name="$PROJECT_DIR$/js/data" />
     </key>
   </component>
   <component name="RunManager">
@@ -104,7 +107,7 @@
       <workItem from="1766679696434" duration="249000" />
       <workItem from="1767444569551" duration="3763000" />
       <workItem from="1767533840283" duration="7000" />
-      <workItem from="1767535011825" duration="27689000" />
+      <workItem from="1767535011825" duration="28982000" />
     </task>
     <servers />
   </component>
