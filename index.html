@@ -41,6 +41,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- =================================================================
@@ -175,16 +177,24 @@
         </div>
     </section>
 
+    <!-- index.html -->
     <section class="cases" id="cases">
         <div class="cases__container">
             <div class="cases__header animate-up">
                 <h2 class="cases__title">Проекты, которыми <span class="cases__title-accent">мы гордимся</span></h2>
+
+                <!-- 👇 ВОЗВРАЩАЕМ ЭТОТ БЛОК 👇 -->
                 <div class="cases__filter" id="cases-filter-container"></div>
             </div>
-            <div class="cases__grid" id="cases-grid"></div>
+            <div class="cases__grid" id="cases-grid">
+                <!-- Карточки будут сгенерированы здесь -->
+            </div>
+            <!-- Возвращаем анонсер для доступности -->
             <div class="visually-hidden" aria-live="polite" id="filter-announcer"></div>
         </div>
     </section>
+
+
 
     <section class="team" id="team">
         <div class="team__container">
@@ -193,9 +203,36 @@
                 <p class="team__subtitle">Эксперты, которые превращают ваши идеи в цифровые продукты мирового уровня.</p>
             </div>
             <div class="team__grid">
-                <div class="team-member animate-up"><div class="team-member__image-box"><img src="./image/personal/Маркjpg.jpg" alt="Фотография Марка Заблуева, Frontend разработчика" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Марк Заблуев</h3><span class="team-member__role">Frontend</span><p class="team-member__bio">Воплощает любые идеи в жизнь</p></div></div>
+                <div class="team-member animate-up">
+                    <div class="team-member__image-box">
+                        <img src="./image/personal/Маркjpg.jpg" alt="Фотография Марка Заблуева, Frontend разработчика" class="team-member__photo" loading="lazy">
+                        <div class="team-member__socials">
+                            <a href="#" class="social-link">MAX</a>
+                            <a href="#" class="social-link">TG</a>
+                        </div>
+                    </div>
+                    <div class="team-member__info">
+                        <h3 class="team-member__name">Марк Заблуев</h3>
+                        <span class="team-member__role">Frontend</span>
+                        <p class="team-member__bio">Воплощает любые идеи в жизнь</p>
+                    </div>
+                </div>
                 <div class="team-member animate-up"><div class="team-member__image-box"><img src="./image/personal/IMG_5252.JPG" alt="Фотография Валерии Ефимовой, дизайнера" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Валерия Ефимова</h3><span class="team-member__role">Дизайнер/Айдентика</span><p class="team-member__bio">Персонализирует уникальные образы и стили</p></div></div>
                 <div class="team-member animate-up"><div class="team-member__image-box"><img src="./image/personal/komitas.webp" alt="Фотография Комитаса Погосяна, Backend разработчика" class="team-member__photo" loading="lazy"><div class="team-member__socials"><a href="#" class="social-link">MAX</a><a href="#" class="social-link">TG</a></div></div><div class="team-member__info"><h3 class="team-member__name">Комитас Погосян</h3><span class="team-member__role">Backend</span><p class="team-member__bio">Воин дракона</p></div></div>
+                <div class="team-member animate-up">
+                    <div class="team-member__image-box">
+                        <img src="./image/personal/2026-01-05 21.28.21.jpg" alt="Фотография Марка Заблуева, Frontend разработчика" class="team-member__photo" loading="lazy">
+                        <div class="team-member__socials">
+                            <a href="#" class="social-link">MAX</a>
+                            <a href="#" class="social-link">TG</a>
+                        </div>
+                    </div>
+                    <div class="team-member__info">
+                        <h3 class="team-member__name">Алёна Четвергова</h3>
+                        <span class="team-member__role">Фотограф / контент-мейкер</span>
+                        <p class="team-member__bio">Профессионализм и уют в каждой съемке</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -308,11 +345,16 @@
     </div>
 </div>
 
-<!-- =================================================================
-== ЕДИНАЯ ТОЧКА ВХОДА ДЛЯ ВСЕХ СКРИПТОВ
-================================================================== -->
+<!-- 🟢 ВЕРНИ ЭТУ СТРОЧКУ 🟢 -->
+<!-- index.html -> в конце <body> -->
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script> <!-- 👈 ДОБАВЬ ЭТОТ СКРИПТ -->
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script type="module" src="./js/app.js"></script>
+
+
+
+
 
 </body>
 </html>

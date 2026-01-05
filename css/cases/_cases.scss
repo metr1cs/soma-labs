@@ -1,5 +1,5 @@
 // =================================================================
-// == СЕКЦИЯ ПОРТФОЛИО (КЕЙСЫ)
+// == СЕКЦИЯ ПОРТФОЛИО (КЕЙСЫ) - Финальная версия для Isotope
 // =================================================================
 
 .cases {
@@ -7,21 +7,6 @@
     background: var(--bg-secondary);
     padding: var(--section-padding) 0;
     overflow: hidden;
-    transition: background var(--transition-speed) ease;
-
-    // Декоративные градиенты на фоне
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background:
-                radial-gradient(circle at 80% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
-        pointer-events: none;
-    }
 
     &__container {
         position: relative;
@@ -51,7 +36,6 @@
         }
     }
 
-    // Контейнер для кнопок фильтров
     &__filter {
         display: flex;
         gap: 1rem;
@@ -60,7 +44,7 @@
     }
 }
 
-// Кнопки фильтра
+// --- Кнопки фильтра ---
 .filter-btn {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -86,42 +70,46 @@
     }
 }
 
-// Сетка проектов (контейнер для Isotope)
+
+// --- СЕТКА ПРОЕКТОВ (Контейнер для Isotope) ---
 .cases__grid {
-    // Isotope управляет позиционированием, поэтому grid-свойства не нужны
+    // Isotope управляет всем сам. Мы лишь задаем отрицательные отступы,
+    // чтобы компенсировать margin у дочерних .case-card.
+    margin: 0 -1%;
 }
 
-// Карточка проекта (элемент для Isotope)
+// --- КАРТОЧКА ПРОЕКТА (Элемент для Isotope) ---
 .case-card {
-    width: 100%; // Isotope будет управлять шириной, но зададим базовое значение
-    margin-bottom: var(--container-gap); // Отступ между рядами
+    // Isotope будет управлять позицией, мы задаем только размер и отступы
+    width: 31.333%; // Ширина для 3 колонок с отступом в 1% с каждой стороны
+    margin: 0 1% 2%; // Горизонтальный и вертикальный отступы
 
-    @media (min-width: 601px) {
-        width: calc(50% - (var(--container-gap) / 2));
+    // Плавный переход для анимаций Isotope
+    transition: transform 0.4s ease, opacity 0.4s ease;
+
+    // Адаптивность
+    @media (max-width: 1200px) {
+        width: 48%; // 2 колонки
     }
-    @media (min-width: 1025px) {
-        width: calc(33.333% - (var(--container-gap) * 2 / 3));
+    @media (max-width: 768px) {
+        width: 98%; // 1 колонка
     }
 
-    // Ссылка-обертка, делающая всю карточку кликабельной
-    &__link-wrapper {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+    // Ссылка-обертка
+    a {
         text-decoration: none;
-        background: var(--card-bg);
-        border-radius: 32px;
-        overflow: hidden;
-        border: 1px solid var(--card-border);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        display: block;
+        transition: transform 0.4s ease;
 
         &:hover {
-            transform: translateY(-15px);
-            border-color: var(--accent);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+            transform: translateY(-10px);
 
-            .case-card__image { transform: scale(1.08); }
-            .case-card__link { color: var(--accent); padding-left: 5px; }
+            .case-card__image {
+                transform: scale(1.05);
+            }
+            .case-card__name {
+                color: var(--accent);
+            }
         }
     }
 
@@ -129,14 +117,15 @@
         position: relative;
         height: 320px;
         overflow: hidden;
-        background: #1a1a1a; // Плейсхолдер на случай медленной загрузки
+        border-radius: 24px;
+        background: #1a1a1a; // Цвет-заглушка
     }
 
     &__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     &__overlay {
@@ -158,58 +147,13 @@
     }
 
     &__content {
-        padding: clamp(1.5rem, 4vw, 2.5rem);
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
+        padding: 1.5rem 0.5rem;
     }
 
     &__name {
-        font-size: 1.75rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-        color: var(--text-main);
-    }
-
-    &__text {
-        color: var(--text-dim);
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 2rem;
-        flex-grow: 1;
-    }
-
-    &__link {
-        text-decoration: none;
-        color: var(--text-main);
+        font-size: 1.5rem;
         font-weight: 700;
-        font-size: 0.95rem;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: auto; // Прижимает ссылку к низу карточки
+        color: var(--text-main);
+        transition: color 0.3s ease;
     }
-}
-
-// =================================================================
-// == СЛУЖЕБНЫЕ КЛАССЫ
-// =================================================================
-
-// Класс для скрытия элементов, которые должны быть доступны скринридерам
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-// Служебные классы Isotope.js для управления скрытыми элементами
-.isotope-hidden.isotope-item {
-    pointer-events: none;
-    z-index: 1;
 }

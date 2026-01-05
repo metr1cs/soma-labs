@@ -1,47 +1,94 @@
-/**
- * =================================================================
- * ДАННЫЕ О КЕЙСАХ
- * =================================================================
- * Единый источник правды для всех проектов в портфолио.
- * Чтобы добавить новый кейс, просто скопируйте объект и заполните его данными.
- */
-
+// js/data/cases-data.js
 export const casesData = [
     {
-        id: 'neo-market',
-        title: 'Neo-Market Platform',
-        category: 'sites', // Категории: 'sites' или 'identity'
-        imageSrc: './image/cases/Frame 1312317285.webp',
+        id: 'Coswick.market',
+        title: 'Coswick.market',
         tag: 'E-commerce',
-        description: 'Разработка мультивендорного маркетплейса на Next.js.',
-        link: '/cases/neo-market-platform.html' // Прямая ссылка на детальную страницу
+        category: 'sites', //
+        imageSrc: './image/cases/Frame 1312317285.webp',
+
+        slides: [
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.38.05.png', caption: 'Главная страница' },
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.38.05.png', caption: 'Карточка товара' },
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.40.20.png', caption: 'Админ панель' }
+        ]
+    },
+    {
+        id: 'Юридическая помощь в Нижневартовске',
+        title: 'Юридическая помощь в Нижневартовске',
+        tag: 'E-commerce',
+        category: 'sites', //
+        imageSrc: './image/cases/Снимок экрана 2026-01-05 в 21.44.04.png',
+
+        slides: [
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.44.50.png', caption: 'Главная страница' },
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.38.05.png', caption: 'Карточка товара' },
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.40.20.png', caption: 'Админ панель' }
+        ]
+    },
+    {
+        id: 'Азбука-Пола',
+        title: 'Азбука-Пола',
+        tag: 'E-commerce',
+        category: 'sites', //
+        imageSrc: './image/cases/Frame 1312317278.webp',
+
+        slides: [
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.38.05.png', caption: 'Главная страница' },
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.45.40.png', caption: 'Карточка товара' },
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.46.35.png', caption: 'Админ панель' }
+        ]
+    },
+    {
+        id: 'Азбука-Пола',
+        title: 'Азбука-Пола',
+        tag: 'E-commerce',
+        category: 'sites', //
+        imageSrc: './image/cases/Frame 1312317278.webp',
+
+        slides: [
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.38.05.png', caption: 'Главная страница' },
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.45.40.png', caption: 'Карточка товара' },
+            { src: './image/cases/Снимок экрана 2026-01-05 в 21.46.35.png', caption: 'Админ панель' }
+        ]
     },
     {
         id: 'lumina-tech',
         title: 'Lumina Tech Logo',
-        category: 'identity',
-        imageSrc: 'https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?auto=format&fit=crop&q=80&w=800',
-        tag: 'Branding',
-        description: 'Фирменный стиль и стратегия позиционирования для IT-стартапа.',
-        link: '/cases/lumina-tech-logo.html'
+        tag: 'identity',
+        imageSrc: './image/cases/Frame 1312317283.webp',
+        slides: [
+            { src: 'https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?auto=format&fit=crop&q=80&w=1200', caption: 'Логотип на светлом фоне' },
+            { src: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200', caption: 'Визитные карточки' }
+        ]
+    },
+    {
+        id: 'lumina-tech',
+        title: 'Lumina Tech Logo',
+        tag: 'identity',
+        imageSrc: './image/cases/Frame 1312317283.webp',
+        slides: [
+            { src: 'https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?auto=format&fit=crop&q=80&w=1200', caption: 'Логотип на светлом фоне' },
+            { src: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200', caption: 'Визитные карточки' }
+        ]
+    },
+    {
+        id: 'lumina-tech',
+        title: 'Lumina Tech Logo',
+        tag: 'identity',
+        imageSrc: './image/cases/Frame 1312317283.webp',
+        slides: [
+            { src: 'https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?auto=format&fit=crop&q=80&w=1200', caption: 'Логотип на светлом фоне' },
+            { src: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200', caption: 'Визитные карточки' }
+        ]
     },
     {
         id: 'zenith-app',
         title: 'Zenith App',
-        category: 'sites',
-        imageSrc: 'https://images.unsplash.com/photo-1551288049-bbda38a10ad5?auto=format&fit=crop&q=80&w=800',
-        tag: 'Fintech',
-        description: 'Интуитивный интерфейс для управления финансами.',
-        link: '/cases/zenith-app.html'
-    },
-    // --- НОВЫЙ КЕЙС ПРОСТО ДОБАВЛЯЕТСЯ СЮДА ---
-    // {
-    //     id: 'another-project',
-    //     title: 'Название нового проекта',
-    //     category: 'sites',
-    //     imageSrc: './path/to/new-image.webp',
-    //     tag: 'New Tag',
-    //     description: 'Краткое описание нового супер-проекта.',
-    //     link: '/cases/another-project.html'
-    // }
+        tag: 'identity',
+        imageSrc: './image/cases/Frame 1312317284.webp',
+        slides: [
+            { src: 'https://images.unsplash.com/photo-1551288049-bbda38a10ad5?auto=format&fit=crop&q=80&w=1200', caption: 'Дашборд приложения' },
+        ]
+    }
 ];

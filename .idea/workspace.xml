@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2492ad5f-1984-4df6-978a-859651a8e1a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-05 в 21.38.05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-05 в 21.39.14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-05 в 21.40.20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-05 в 21.44.04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-05 в 21.44.50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-05 в 21.45.40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/cases/Снимок экрана 2026-01-05 в 21.46.35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/personal/2026-01-05 21.28.21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/send-telegram.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/send-telegram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cases/_cases.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/cases/_cases.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/data/cases-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/cases-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/modules/portfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modules/portfolio.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,10 +76,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/image/cases" />
+      <recent name="$PROJECT_DIR$/image/personal" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/js/modules" />
       <recent name="$PROJECT_DIR$/js/data" />
-      <recent name="$PROJECT_DIR$/image/personal" />
     </key>
   </component>
   <component name="RunManager">
@@ -111,7 +121,7 @@
       <workItem from="1766679696434" duration="249000" />
       <workItem from="1767444569551" duration="3763000" />
       <workItem from="1767533840283" duration="7000" />
-      <workItem from="1767535011825" duration="18107000" />
+      <workItem from="1767535011825" duration="21655000" />
     </task>
     <servers />
   </component>
