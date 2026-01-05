@@ -1,44 +1,97 @@
-// ВАЖНО: ЭТО НЕБЕЗОПАСНАЯ ВЕРСИЯ ДЛЯ ТЕСТИРОВАНИЯ
-// НЕ ИСПОЛЬЗУЙТЕ ЕЕ В ПУБЛИЧНОМ ПРОЕКТЕ
+/**
+ * =================================================================
+ * SERVERLESS-ФУНКЦИЯ ДЛЯ ОТПРАВКИ ЗАЯВОК В TELEGRAM
+ * =================================================================
+ * Принимает POST-запрос с данными формы и отправляет их боту.
+ * Путь: /api/send-telegram
+ *
+ * ЭТА ВЕРСИЯ ПРЕДНАЗНАЧЕНА ДЛЯ РАЗВЕРТЫВАНИЯ НА VERCEL
+ * И ПОЛАГАЕТСЯ НА ПЕРЕМЕННЫЕ ОКРУЖЕНИЯ VERCEL.
+ *
+ * НЕ ВСТАВЛЯЙТЕ СЮДА СЕКРЕТНЫЕ КЛЮЧИ НАПРЯМУЮ!
+ */
 
 export default async function handler(req, res) {
-    console.log('\n--- [API] New Request Received (DEBUG MODE) ---');
-
+    // 1. Читаем секретные ключи из переменных окружения Vercel
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
 
-    // ---------------------------------
-    console.log(`[API] Bot Token Loaded: ${botToken ? 'YES' : 'NO'}`);
-    console.log(`[API] Bot Token Loaded: ${botToken ? 'YES' : 'NO'}`);
-    console.log(`[API] Chat ID Loaded: ${chatId ? 'YES' : 'NO'}`);
-
-    if (req.method !== 'POST') {
-        return res.status(405).json({ message: 'Only POST requests allowed' });
+    // 2. Проверка, что ключи успешно загружены
+    if (!botToken || !chatId) {
+        console.error('SERVER ERROR: Telegram secrets (TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID) are not configured in Vercel Environment Variables.');
+        return res.status(500).json({ message: 'Server configuration error: Telegram secrets are missing.' });
     }
 
-    const { name, email, phone, message } = req.body;
-    console.log('[API] Received form data:', { name, email, phone });
+    // 3. Принимаем только POST-запросы
+    if (req.method !== 'POST') {
+        return res.status(405).json({ message: 'Method Not Allowed. Only POST requests are accepted.' });
+    }
 
-    const escapeMarkdown = (text) => text ? text.replace(/[_*[\]()~`>#+\-=|{}.!]/g, '\\$&') : '';
-    const text = `🔔 *Новая заявка с сайта Soma Labs\\!* 🔔\n\n*Имя:* \`${escapeMarkdown(name)}\`\n*Email:* \`${escapeMarkdown(email)}\`\n*Телефон:* \`${escapeMarkdown(phone)}\`\n\n*Сообщение:*\n\`\`\`\n${escapeMarkdown(message) || 'Не заполнено'}\n\`\`\``;
+    // 4. Получаем данные из тела запроса
+    const { name, email, phone, message, _honey } = req.body;
 
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-    console.log('[API] Sending request to Telegram...');
+    // 5. Простейшая защита от спама (Honeypot)
+    if (_honey) {
+        console.warn('SPAM DETECTED: Honeypot field was filled.');
+        return res.status(400).json({ message: 'Spam detected. Request rejected.' });
+    }
+
+    // 6. Валидация обязательных полей
+    if (!name || !email || !phone) {
+        console.warn('VALIDATION FAILED: Required fields (name, email, phone) are missing.');
+        return res.status(400).json({ message: 'Validation error: Name, email, and phone are required.' });
+    }
+
+    // 7. Функция для экранирования символов для MarkdownV2
+    const escapeMarkdown = (text) => {
+        if (!text) return '';
+        // Символы, требующие экранирования в MarkdownV2
+        return text.replace(/[_*[\]()~`>#+\-=|{}.!]/g, '\\$&');
+    };
+
+    // 8. Формируем красивое сообщение для Telegram
+    const telegramText = `
+🔔 *Новая заявка с сайта Soma Labs\\!* 🔔
+
+*Имя:* \`${escapeMarkdown(name)}\`
+*Email:* \`${escapeMarkdown(email)}\`
+*Телефон:* \`${escapeMarkdown(phone)}\`
+
+*Сообщение:*
+\`\`\`
+${escapeMarkdown(message) || 'Не заполнено'}
+\`\`\`
+    `;
+
+    // 9. URL для отправки в Telegram Bot API
+    const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     try {
-        const response = await fetch(url, {
+        // 10. Отправляем запрос в Telegram
+        const telegramResponse = await fetch(telegramApiUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ chat_id: chatId, text: text, parse_mode: 'MarkdownV2' }),
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: telegramText,
+                parse_mode: 'MarkdownV2' // Используем MarkdownV2 для форматирования
+            }),
         });
-        const result = await response.json();
 
-        if (!result.ok) throw new Error(`Telegram API error: ${result.description}`);
+        const telegramResult = await telegramResponse.json();
 
-        console.log('[API] Successfully sent message to Telegram.');
-        res.status(200).json({ success: true });
+        if (!telegramResult.ok) {
+            // Если Telegram вернул ошибку (например, неверный токен или chat ID)
+            console.error(`TELEGRAM API ERROR: ${telegramResult.description}`);
+            throw new Error(`Telegram API error: ${telegramResult.description || 'Unknown error from Telegram.'}`);
+        }
+
+        // 11. Отвечаем фронтенду, что все прошло успешно
+        return res.status(200).json({ success: true, message: 'Message sent to Telegram successfully.' });
+
     } catch (error) {
-        console.error('[API] CATCH BLOCK ERROR:', error.message);
-        res.status(500).json({ success: false, message: error.message });
+        // 12. Логируем и отправляем ошибку фронтенду
+        console.error('SERVER CATCH BLOCK ERROR:', error.message);
+        return res.status(500).json({ success: false, message: `Failed to send message: ${error.message}` });
     }
 }
