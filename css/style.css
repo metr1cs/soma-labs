@@ -1056,7 +1056,7 @@ body.light-theme .modal-card {
 .team__container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 var(--container-padding);
+  padding: 0 30px;
 }
 .team__header {
   text-align: left;
@@ -1207,6 +1207,11 @@ body.light-theme .modal-card {
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
   height: 100%;
   cursor: pointer;
+}
+@media (max-width: 350px) {
+  .service-card {
+    width: 90%;
+  }
 }
 body.light-theme .service-card {
   background: #ffffff;
